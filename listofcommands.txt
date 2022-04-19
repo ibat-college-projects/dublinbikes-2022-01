@@ -1,0 +1,24 @@
+ng g interface models/position
+
+ng g interface models/dublinbike
+
+ng g service services/Dublinbike
+
+ng g component components/dublinbike
+
+ng g component components/StationDetail
+
+set up routes
+ {path: 'stations', component:DublinbikeComponent},
+ {path: 'stations/:id', component:StationDetailComponent},
+ {path: '', component:DublinbikeComponent},
+
+
+
+ ng serve
+
+const endpoint = `${this.ENDPOINT_URL}?contract=${this.CONTRACT_NAME}&apiKey=${this.API_KEY}`;
+
+import { HttpClient } from '@angular/common/http';
+
+ ng g pipe pipes/filterstations
