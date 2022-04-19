@@ -1,0 +1,20 @@
+
+<div class="container">
+    <p> You are searching for {{searchText}}</p>
+<input type="text" placeholder = "filter" [(ngModel)]="searchText" />
+<table class="table">
+<tr *ngFor="let station of dublinBikeStations | filterstations: searchText">
+<td>{{station.number}}</td>
+<td>{{station.contractName}}</td>
+<td>{{station.name}}</td>
+<td>{{station.address}}</td>
+<td>{{station.position.lat}} : {{station.position.lng}} </td>
+<td><a routerLink="/station/{{station.number}}">Load Station</a></td>
+
+
+</tr>
+
+
+</table>
+
+</div>

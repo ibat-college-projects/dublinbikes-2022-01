@@ -1,0 +1,18 @@
+<div class="container">
+
+    <nav>
+        <a routerLink="/stations">All Stations</a>
+    </nav>
+</div>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>{{station.number}}</td>
+            <td>{{station.contractName}}</td>
+            <td>{{station.name}}</td>
+            <td>{{station.address}}</td>
+            <td>{{station.position.lat}} : {{station.position.lng}} </td>
+        </tr>
+    </table>
+</div>
